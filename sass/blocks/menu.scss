@@ -1,0 +1,26 @@
+.menu__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.menu__link {
+	display: block;
+	padding: 0 10px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 24px;
+}
+@media #{$tablet} {
+	.menu__list {
+		min-height: 100px;
+		align-items: center;
+	}
+}
+@media #{$laptop} {
+	.menu__list {
+		min-height: 150px;
+		justify-content: space-between;
+	}
+}

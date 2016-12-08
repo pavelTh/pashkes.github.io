@@ -1,0 +1,35 @@
+.person__photo {
+	width: 220px;
+	height: 220px;
+	margin: 0 auto;
+	padding: 10px;
+	background-color: $blue;
+	border-radius: 50%;
+	img {
+		border-radius: 50%;
+	}
+}
+.person__name {
+	margin-top: 25px;
+	margin-bottom: 0;
+	font-weight: 600;
+	font-size: 36px;
+}
+.person__prof {
+	margin: 10px 0;
+	font-weight: 300;
+	font-size: 24px;
+	text-align: center;
+}
+@media #{$laptop} {
+	.person {
+		position: relative;
+		padding-top: 100px;
+	}
+	.person__photo {
+		position: absolute;
+		top: -120px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

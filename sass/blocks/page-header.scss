@@ -1,0 +1,24 @@
+.page-header {
+  margin-bottom: 60px;
+}
+.page-header__top {
+  background-color: $blue;
+  margin-bottom: 40px;
+}
+.page-header__top-inner {
+  @include container();
+  padding: 25px 15px;
+}
+@media #{$tablet} {
+  .page-header__top-inner {
+    padding: 0 15px;
+  }
+}
+@media #{$laptop} {
+	.page-header__top{
+		
+	}
+	.page-header__top {
+		margin-bottom: 0;
+	}
+}

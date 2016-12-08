@@ -1,0 +1,46 @@
+body {
+	font: 400 14px/1.4 'Roboto', sans-serif;
+  background-color: $grey;
+  color: $black;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+  text-align: center;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+button,
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+ul,
+ol {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+strong {
+  font-weight: normal;
+}
+a {
+  transition: all 0.2s linear;
+  &:hover {
+    color: $black;
+  }
+}

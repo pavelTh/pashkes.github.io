@@ -1,0 +1,36 @@
+
+$tablet: (min-width: 768px);
+$laptop: (min-width: 1024px);
+$laptop-l: (min-width: 1200px);
+
+@mixin container () {
+  width: auto;
+  padding: 0 15px;
+  @media #{$tablet} {
+    width: 96.09375%; 
+    max-width: 994px;  
+    margin: 0 auto;
+  }
+
+  @media #{$laptop} {
+    width: 97.5%; 
+    max-width: 1170px;
+  }
+}
+@mixin center($horizontal: true, $vertical: true) {
+  position: absolute;
+
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
