@@ -25,12 +25,24 @@
 	color: #222;
 	text-align: left;
 }
-.progects__link {
-	text-transform: uppercase;
+.progect__link {
+	display: inline-block;
 	text-decoration: none;
-	color: #2b98d4;
-	font-weight: 600;
-	font-size: 16px;
+	text-transform: uppercase;
+	background-color: transparent;
+	border: 2px solid $blue;
+	padding: 10px;
+	font-weight: 700;
+	color: $blue;
+	border-radius: 5px;
+	&:hover {
+		background-color: $blue;
+		color: #fff;
+	}
+	&:focus {
+		background-color: #235571;
+		border-color: #235571;
+	}
 }
 @media #{$tablet} {
 	.progects__item {

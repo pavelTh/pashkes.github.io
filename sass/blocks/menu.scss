@@ -1,26 +1,43 @@
 .menu__list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .menu__link {
-	display: block;
-	padding: 0 10px;
-	color: #fff;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 24px;
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 24px;
+  &--active {
+    &::before {
+      content: '';
+      position: absolute;
+      right: 10px;
+      left: 10px;
+      bottom: 0;
+      height: 2px;
+      background-color: rgba(33, 33, 33, 0.6);
+    }
+  }
+  &:hover {
+  	 &::before {
+      display: none;
+    }
+  }
 }
 @media #{$tablet} {
-	.menu__list {
-		min-height: 100px;
-		align-items: center;
-	}
+  .menu__list {
+    min-height: 100px;
+    align-items: center;
+  }
 }
 @media #{$laptop} {
-	.menu__list {
-		min-height: 150px;
-		justify-content: space-between;
-	}
+  .menu__list {
+    min-height: 150px;
+    justify-content: space-between;
+  }
 }
