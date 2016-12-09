@@ -3,31 +3,30 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+.menu__item {
+  margin-right: 10px;
+}
 .menu__link {
   position: relative;
   display: block;
   padding: 0 10px;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 24px;
+  background-color: #cec6c6;
+  border-radius: 2px;
   &--active {
-    &::before {
-      content: '';
-      position: absolute;
-      right: 10px;
-      left: 10px;
-      bottom: 0;
-      height: 2px;
-      background-color: rgba(33, 33, 33, 0.6);
+    border-bottom: 2px solid $black;
+    &:hover {
+      background-color: #fff;
+      border-bottom: 2px solid $blue;
     }
   }
   &:hover {
-  	 &::before {
-      display: none;
+      background-color: #fff;
     }
-  }
 }
 @media #{$tablet} {
   .menu__list {
