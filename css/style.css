@@ -541,9 +541,21 @@ a {
 @media (min-width: 768px) {
   .contacts {
     width: auto;
+    padding: 0 15px;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center; }
+    justify-content: center; } }
+  @media (min-width: 768px) and (min-width: 768px) {
+    .contacts {
+      width: 96.09375%;
+      max-width: 994px;
+      margin: 0 auto; } }
+  @media (min-width: 768px) and (min-width: 1024px) {
+    .contacts {
+      width: 97.5%;
+      max-width: 1170px; } }
+
+@media (min-width: 768px) {
   .contacts__item {
     margin-right: 20px; } }
 
