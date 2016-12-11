@@ -36,7 +36,7 @@
       <ul class="contacts">
         <li class="contacts__item">
           <svg>
-            <use xlink:href="img/symbol.svg#icon-location"></use>
+            <use xlink:href="img/symbol.svg#icon-location2"></use>
           </svg>
           <span class="contacts__link">
             Borova, Kyivs'ka oblast
@@ -52,7 +52,7 @@
         </li>
         <li class="contacts__item">
           <svg>
-            <use xlink:href="img/symbol.svg#icon-mail"></use>
+            <use xlink:href="img/symbol.svg#icon-mention"></use>
           </svg>
           <a href="mailto:pashkes@gmail.com" class="contacts__link">
           pashkes@gmail.com
@@ -61,106 +61,114 @@
       </ul>
     </div>
   </header>
-  <div class="about-me">
-    <section class="about-me__box about-me__skills">
-    <div class="about-me__icon">
-      <svg>
-        <use xlink:href="img/symbol.svg#icon-progress-skills">
-      </svg>
-    </div>
+  <main class="content">
+    <article class="content__block">
+      <div class="content__icon">
+        <svg>
+          <use xlink:href="img/symbol.svg#icon-equalizer"></use> 
+        </svg>
+      </div>
       <h2 class>Мои навыки</h2>
-      <ul class="about-me__skills-list">
-        <li class="about-me__skill">
-          <p class="about-me__name-skill">CSS</p>
-          <div class="about-me__progress">
-            <div class="about-me__progress-bar" style="width: 60%;"><span class="about-me__skill-circle"></span></div>
+      <ul class="skills">
+        <li class="skills__item">
+          <p class="skills__name">CSS</p>
+          <div class="skills__progress">
+            <div class="skills__progress-bar" style="width: 60%;"><span class="skills__circle"></span></div>
           </div>
         </li>
-         <li class="about-me__skill">
-          <p class="about-me__name-skill">Sass</p>
-          <div class="about-me__progress">
-            <div class="about-me__progress-bar" style="width: 40%;"><span class="about-me__skill-circle"></span></div>
+        <li class="skills__item">
+          <p class="skills__name">Sass</p>
+          <div class="skills__progress">
+            <div class="skills__progress-bar" style="width: 40%;"><span class="skills__circle"></span></div>
           </div>
         </li>
-        <li class="about-me__skill">
-          <p class="about-me__name-skill">JS</p>
-          <div class="about-me__progress">
-            <div class="about-me__progress-bar" style="width: 10%;"><span class="about-me__skill-circle"></span></div>
+        <li class="skills__item">
+          <p class="skills__name">JS</p>
+          <div class="skills__progress">
+            <div class="skills__progress-bar" style="width: 10%;"><span class="skills__circle"></span></div>
           </div>
         </li>
-        <li class="about-me__skill">
-          <p class="about-me__name-skill">jQuery</p>
-          <div class="about-me__progress">
-            <div class="about-me__progress-bar" style="width: 20%;"><span class="about-me__skill-circle"></span></div>
+        <li class="skills__item">
+          <p class="skills__name">jQuery</p>
+          <div class="skills__progress">
+            <div class="skills__progress-bar" style="width: 20%;"><span class="skills__circle"></span></div>
           </div>
         </li>
       </ul>
-    </section>
-    <div class="about-me__box">
-    <div class="about-me__icon">
-      <svg>
-        <use xlink:href="img/symbol.svg#icon-progress-skills">
-      </svg>
-    </div>
+    </article>
+    <article class="content__block">
+      <div class="content__icon">
+        <svg>
+          <use xlink:href="img/symbol.svg#icon-pencil"></use> 
+        </svg>
+      </div>
       <h2 class>Подробнее о уровне владения навыками</h2>
-      <ul class="about-me__more-skils">
-      <li class="about-me__desc">
+      <ul class="more-skills">
+        <li class="more-skills__desc">
           <p><strong>CSS</strong> - умение верстать как на флоатах и инлайн блоках так и на флексах, cмотрите раздел сайта "Portfolio".</p>
         </li>
-        <li class="about-me__desc">
+        <li class="more-skills__desc">
           <p><strong>JS</strong> - базовое понимание языка (функции, циклы, объекты, массивы).</p>
         </li>
-        <li class="about-me__desc">
+        <li class="more-skills__desc">
           <p><strong>jQuery</strong> - на уровне написание простой логики и использование готовых решений.</p>
         </li>
       </ul>
       <h2 class>Что я использую в работе</h2>
-      <ul class="about-me__more-skils  about-me__more-skils--use">
-      <li class="about-me__desc">
-          <strong>GIT</strong>
+      <ul class="tags">
+        <li class="tags__item">Git</li>
+        <li class="tags__item">BEM</li>
+        <li class="tags__item">Gulp</li>
+        <li class="tags__item">SVG</li>
+        <li class="tags__item">Emmet</li>
+      </ul>
+    </article>
+    <article class="content__block">
+      <div class="content__icon">
+        <svg>
+          <use xlink:href="img/symbol.svg#icon-certificate"></use> 
+        </svg>
+      </div>
+      <h2>Сертификаты</h2>
+      <ul class="sert">
+        <li class="sert__item">
+          <a href="https://assets.htmlacademy.ru/certificates/intensive/24/164879.pdf" class="sert__img">
+            <img src="img/sertificat_advanced-html.jpg" alt="sertificat_advanced" width="220" height="200">
+            <svg>
+              <use xlink:href="img/symbol.svg#icon-document-file-pdf"></use>  
+            </svg>
+          </a>
         </li>
-        <li class="about-me__desc">
-          <strong>Gulp</strong>
+        <li class="sert__item">
+          <a href="https://assets.htmlacademy.ru/certificates/intensive/28/164879.pdf" class="sert__img">
+            <img src="img/sertificat_js.jpg" alt="sertificat_advanced" width="220" height="200">
+            <svg>
+              <use xlink:href="img/symbol.svg#icon-document-file-pdf"></use>  
+            </svg>
+          </a>
         </li>
-        <li class="about-me__desc">
-          <strong>BEM</strong>
-        </li>
-        <li class="about-me__desc">
-          <strong>SVG</strong>
+        <li class="sert__item">
+          <a href="https://assets.htmlacademy.ru/certificates/intensive/18/164879.pdf" class="sert__img">
+            <img src="img/sertificat_basic-html.jpg" alt="sertificat_advanced" width="220" height="200">
+            <svg>
+              <use xlink:href="img/symbol.svg#icon-document-file-pdf"></use>  
+            </svg>
+          </a>
         </li>
       </ul>
-    </div>
-    <div class="about-me__box">
-    <div class="about-me__icon">
-      <svg>
-        <use xlink:href="img/symbol.svg#icon-learning">
-      </svg>
-    </div>
-      <h2>Дополнительное образование</h2>
-      <ul class="about-me__more-skils">
-      <li class="about-me__desc">
-          <p>Интенсивный онлайн курс HTML Academy «Базовый HTML и CSS»</p>
-        </li>
-        <li class="about-me__desc">
-          <p>Интенсивный онлайн курс HTML Academy «Продвинутый HTML и CSS» </p>
-        </li>
-        <li class="about-me__desc">
-          <p>Интенсивный онлайн курс HTML Academy «Базовый JavaScript» </p>
-        </li>
-      </ul>
-    </div>
-    <div class="about-me__box">
-    <div class="about-me__icon">
-      <svg>
-        <use xlink:href="img/symbol.svg#icon-pencil">
-      </svg>
-    </div>
+    </article>
+    <article class="content__block">
+      <div class="content__icon">
+        <svg>
+          <use xlink:href="img/symbol.svg#icon-rocket"></use> 
+        </svg>
+      </div>
       <h2>Планы на будущее и немного о себе</h2>
       <p>В первую очередь конечно же набивать руку верстая проекты различной сложности, при этом каждый день уделять время на изучение JS, понимаю что с одним css и html далеко не уедешь.</p>
       <p>Так же стараюсь каждый день по немного уделять время на английский, думаю в этой сфере знания английского, хотя бы на уровне свободного чтения очень много принесет пользы.</p>
       <p>Я не из тех людей которые в связи с тяжелой ситуацией в стране в финансом плане решили "войти в it", закончили какие то курсы и думают что их с руками и ногами заберут. Да я тоже заканчивал курсы, но это происходило почти на протяжении года, свободное время старался заполнять закреплением тех навыков которые мне давали. Изначально все это было для меня как хобби, но потом решил что было бы здорово если бы хобби переросло в работу.</p>
-    </div>
-  </div>
+    </article>
+  </main>
   <script src="js/script.js"></script>
 </body>
 
