@@ -665,6 +665,17 @@ a {
     .content__block p {
       font-size: 17px; } }
 
+.progects__view {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  transform: scale(0);
+  transition: all .2s ease-in-out; }
+
 .progects__img {
   position: relative;
   display: block;
@@ -680,19 +691,9 @@ a {
     left: 0;
     background-color: transparent;
     transition: background-color 0.2s ease-in, border-radius 0.2s ease-in; }
-  .progects__img svg {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    left: 50%;
-    top: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
-    transform: scale(0);
-    transition: all .2s ease-in-out; }
   .progects__img:hover::before {
     background-color: rgba(0, 0, 0, 0.5); }
-  .progects__img:hover svg {
+  .progects__img:hover .progects__view {
     display: block;
     transform: scale(1.2); }
   .progects__img img {
@@ -803,23 +804,24 @@ a {
   .sert__item:last-child {
     margin-bottom: 0; }
 
+.sert__view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  stroke: #fff;
+  fill: transparent;
+  transition: opacity 0.5s; }
+
 .sert__img {
   position: relative;
   display: block;
   border-radius: 5px;
   font-size: 0; }
-  .sert__img svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    width: 50px;
-    height: 50px;
-    z-index: 1;
-    stroke: #fff;
-    fill: transparent;
-    transition: opacity 0.5s; }
   .sert__img::before {
     content: '';
     position: absolute;
@@ -832,7 +834,7 @@ a {
     transition: all 0.3s; }
   .sert__img:hover::before {
     opacity: 0.3; }
-  .sert__img:hover svg {
+  .sert__img:hover .sert__view {
     opacity: 1; }
 
 @media (min-width: 768px) {
