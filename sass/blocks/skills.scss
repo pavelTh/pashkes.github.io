@@ -1,0 +1,34 @@
+.skills {
+  margin-bottom: 20px;
+}
+.skills__item {
+  margin-bottom: 20px;
+}
+.skills__name {
+  margin: 0px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.skills__progress {
+  border: 1px solid #2b98d4;
+  background-color: #fff;
+  height: 10px;
+  border-radius: 10px;
+}
+.skills__progress-bar {
+  position: relative;
+  background-color: #2b98d4;
+  height: 100%;
+}
+.skills__circle {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #fff;
+  background-color: #2b98d4;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
