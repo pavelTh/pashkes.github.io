@@ -822,10 +822,10 @@ a {
     margin-bottom: 0; }
   .person {
     position: relative;
-    padding-top: 120px; }
+    padding-top: 110px; }
   .person__photo {
     position: absolute;
-    top: -120px;
+    top: -110px;
     left: 50%;
     transform: translateX(-50%); }
   .menu__list {
