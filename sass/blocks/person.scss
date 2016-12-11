@@ -1,38 +1,48 @@
 .person {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 .person__photo {
-	width: 220px;
-	height: 220px;
-	margin: 0 auto;
-	padding: 10px;
-	background-color: $blue;
-	border-radius: 50%;
-	img {
-		border-radius: 50%;
-	}
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: $blue;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  } 
+  img {
+    filter: grayscale(100%);
+    border-radius: 50%;
+    transition: filter 0.3s;
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
 }
 .person__name {
-	margin-top: 25px;
-	margin-bottom: 0;
-	font-weight: 600;
-	font-size: 36px;
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 36px;
 }
 .person__prof {
-	margin: 10px 0;
-	font-weight: 300;
-	font-size: 24px;
-	text-align: center;
+  margin: 10px 0;
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
 }
 @media #{$laptop} {
-	.person {
-		position: relative;
-		padding-top: 100px;
-	}
-	.person__photo {
-		position: absolute;
-		top: -120px;
-		left: 50%;
-		transform: translateX(-50%);
-	}
+  .person {
+    position: relative;
+    padding-top: 100px;
+  }
+  .person__photo {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

@@ -63,11 +63,11 @@
   </header>
   <div class="about-me">
     <section class="about-me__box about-me__skills">
-    <div class="about-me__icon">
-      <svg>
-        <use xlink:href="img/symbol.svg#icon-progress-skills">
-      </svg>
-    </div>
+      <div class="about-me__icon">
+        <svg>
+          <use xlink:href="img/symbol.svg#icon-progress-skills">
+        </svg>
+      </div>
       <h2 class>Мои навыки</h2>
       <ul class="about-me__skills-list">
         <li class="about-me__skill">
@@ -76,7 +76,7 @@
             <div class="about-me__progress-bar" style="width: 60%;"><span class="about-me__skill-circle"></span></div>
           </div>
         </li>
-         <li class="about-me__skill">
+        <li class="about-me__skill">
           <p class="about-me__name-skill">Sass</p>
           <div class="about-me__progress">
             <div class="about-me__progress-bar" style="width: 40%;"><span class="about-me__skill-circle"></span></div>
@@ -97,14 +97,14 @@
       </ul>
     </section>
     <div class="about-me__box">
-    <div class="about-me__icon">
-      <svg>
-        <use xlink:href="img/symbol.svg#icon-progress-skills">
-      </svg>
-    </div>
+      <div class="about-me__icon">
+        <svg>
+          <use xlink:href="img/symbol.svg#icon-progress-skills">
+        </svg>
+      </div>
       <h2 class>Подробнее о уровне владения навыками</h2>
       <ul class="about-me__more-skils">
-      <li class="about-me__desc">
+        <li class="about-me__desc">
           <p><strong>CSS</strong> - умение верстать как на флоатах и инлайн блоках так и на флексах, cмотрите раздел сайта "Portfolio".</p>
         </li>
         <li class="about-me__desc">
@@ -115,46 +115,67 @@
         </li>
       </ul>
       <h2 class>Что я использую в работе</h2>
-      <ul class="about-me__more-skils  about-me__more-skils--use">
-      <li class="about-me__desc">
-          <strong>GIT</strong>
-        </li>
-        <li class="about-me__desc">
-          <strong>Gulp</strong>
-        </li>
-        <li class="about-me__desc">
-          <strong>BEM</strong>
-        </li>
-        <li class="about-me__desc">
-          <strong>SVG</strong>
-        </li>
+      <ul class="tags">
+        <li class="tags__item">Git</li>
+        <li class="tags__item">BEM</li>
+        <li class="tags__item">Gulp</li>
+        <li class="tags__item">SVG</li>
+        <li class="tags__item">Emmet</li>
       </ul>
     </div>
     <div class="about-me__box">
-    <div class="about-me__icon">
-      <svg>
-        <use xlink:href="img/symbol.svg#icon-learning">
-      </svg>
-    </div>
-      <h2>Дополнительное образование</h2>
+      <div class="about-me__icon">
+        <svg>
+          <use xlink:href="img/symbol.svg#icon-learning">
+        </svg>
+      </div>
+      <h2>Сертификаты</h2>
       <ul class="about-me__more-skils">
-      <li class="about-me__desc">
-          <p>Интенсивный онлайн курс HTML Academy «Базовый HTML и CSS»</p>
+        <li class="about-me__desc">
+          <img id="myImg" src="img/sertificat_advanced-html.png" alt="Trolltunga, Norway" width="220" height="200">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <!-- The Close Button -->
+            <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+          </div>
+        </li>
+
+        <li class="about-me__desc">
+          <img id="myImg" src="img/sertificat_advanced-html.png" alt="Trolltunga, Norway" width="220" height="200">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <!-- The Close Button -->
+            <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+          </div>
         </li>
         <li class="about-me__desc">
-          <p>Интенсивный онлайн курс HTML Academy «Продвинутый HTML и CSS» </p>
-        </li>
-        <li class="about-me__desc">
-          <p>Интенсивный онлайн курс HTML Academy «Базовый JavaScript» </p>
+          <img id="myImg" src="img/sertificat_js.png" alt="Trolltunga, Norway" width="220" height="200">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <!-- The Close Button -->
+            <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+          </div>
         </li>
       </ul>
     </div>
     <div class="about-me__box">
-    <div class="about-me__icon">
-      <svg>
-        <use xlink:href="img/symbol.svg#icon-pencil">
-      </svg>
-    </div>
+      <div class="about-me__icon">
+        <svg>
+          <use xlink:href="img/symbol.svg#icon-pencil">
+        </svg>
+      </div>
       <h2>Планы на будущее и немного о себе</h2>
       <p>В первую очередь конечно же набивать руку верстая проекты различной сложности, при этом каждый день уделять время на изучение JS, понимаю что с одним css и html далеко не уедешь.</p>
       <p>Так же стараюсь каждый день по немного уделять время на английский, думаю в этой сфере знания английского, хотя бы на уровне свободного чтения очень много принесет пользы.</p>
