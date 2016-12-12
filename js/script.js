@@ -1,6 +1,10 @@
 'use strict';
+
+//polifil svg
 svg4everybody();
 
+
+//animation
 var wow = new WOW({
     boxClass: 'wow', // default
     animateClass: 'animated', // default
@@ -37,6 +41,7 @@ contactsIcon.css({'animation-delay': '1s', 'animatio-duration': '1s'})
 contactsIcon.addClass('wow zoomIn');
 
 
+//accordeon
 var acc = document.getElementsByClassName("progects__title");
 var i;
 
@@ -47,8 +52,9 @@ for (i = 0; i < acc.length; i++) {
     }
 }
 
-
+// to-top
 $(document).ready(function(){
+
      $(window).scroll(function () {
             if ($(this).scrollTop() > 50) {
                 $('.lift-up').fadeIn();
@@ -56,33 +62,26 @@ $(document).ready(function(){
                 $('.lift-up').fadeOut();
             }
         });
-        // scroll body to 0px on click
+
         $('.lift-up').click(function () {
             $('body,html').animate({
                 scrollTop: 0
             }, 800);
             return false;
         });
- 
-
 });
 
 
 // Preloader
 $(window).on('load',function() {
-	$(".preloader__center").on('click', function() {
 	$(".preloader").fadeOut(500);
-	})		
 });
 
 $(window).on('load', function() {
    $(".preloader").fadeOut(500);
 })
 
-
 $(window).on('load',function() {
 	$(".preloader").delay(2000).fadeOut(500);
-	$(".preloader__center").on('click',function() {
 	$(".preloader").fadeOut(500);
-	})
 })
