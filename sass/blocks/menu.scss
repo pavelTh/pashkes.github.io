@@ -30,13 +30,8 @@
 }
 @media #{$tablet} {
   .menu__list {
-    min-height: 100px;
+    height: 150px;
     align-items: center;
-  }
-}
-@media #{$laptop} {
-  .menu__list {
-    min-height: 150px;
     justify-content: space-between;
   }
 }

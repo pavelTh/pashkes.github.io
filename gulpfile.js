@@ -43,8 +43,11 @@ gulp.task("style", function() {
                     "last 2 Chrome versions",
                     "last 2 Firefox versions",
                     "last 2 Opera versions",
-                    "last 2 Edge versions"
+                    "last 2 IE versions"
                 ]
+            }),
+            mqpacker({
+                sort: true
             })
         ]))
         .pipe(gulp.dest("build/css"))
@@ -97,8 +100,8 @@ gulp.task("stylelocal", function() {
                     "last 1 version",
                     "last 2 Chrome versions",
                     "last 2 Firefox versions",
-                    "last 2 Opera versions",
-                    "last 2 Edge versions"
+                    "last 2 IE versions",
+                    "last 1 UCAndroid version"
                 ]
             })
         ]))

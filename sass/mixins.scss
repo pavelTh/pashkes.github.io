@@ -4,6 +4,7 @@ $laptop: (min-width: 1024px);
 $laptop-l: (min-width: 1200px);
 
 @mixin container () {
+  min-width: 230px;
   width: auto;
   padding: 0 15px;
   @media #{$tablet} {

@@ -13,11 +13,12 @@
   .page-header__top-inner {
     padding: 0 15px;
   }
+  .page-header__top {
+  background-color: $blue;
+  margin-bottom: 0;
+}
 }
 @media #{$laptop} {
-	.page-header__top{
-		
-	}
 	.page-header__top {
 		margin-bottom: 0;
 	}
