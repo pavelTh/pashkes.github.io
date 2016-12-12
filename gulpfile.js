@@ -41,12 +41,11 @@ gulp.task("style", function() {
                     "last 1 version",
                     "last 2 Chrome versions",
                     "last 2 Firefox versions",
-                    "last 2 Opera versions",
-                    "last 2 IE versions"
+                    "last 2 Opera versions"
                 ]
             }),
             mqpacker({
-                sort: true
+                sort: false
             })
         ]))
         .pipe(gulp.dest("build/css"))
@@ -58,8 +57,8 @@ gulp.task("style", function() {
 gulp.task("images", function() {
     return gulp.src("build/img/**/*.{png,jpg,gif}")
         .pipe(imagemin([
-            imagemin.optipng({ optimizationLevel: 3 }),
-            imagemin.jpegtran({ progressive: 70 })
+            imagemin.optipng({ optimizationLevel: 4 }),
+            imagemin.jpegtran({ progressive: 60 })
         ]))
         .pipe(gulp.dest("build/img"));
 });
@@ -98,9 +97,7 @@ gulp.task("stylelocal", function() {
                 browsers: [
                     "last 1 version",
                     "last 2 Chrome versions",
-                    "last 2 Firefox versions",
-                    "last 2 IE versions",
-                    "last 1 UCAndroid version"
+                    "last 2 Firefox versions"
                 ]
             })
         ]))

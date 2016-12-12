@@ -9,8 +9,16 @@
   <link rel="stylesheet" href="css/style.min.css" type="text/css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
-
 <body>
+  <div class="preloader">
+    <div class="preloader__center">
+      <div class="preloader__absolute">
+        <div class="preloader__object  preloader__object--one"></div>
+        <div class="preloader__object  preloader__object--two"></div>
+        <div class="preloader__object  preloader__object--three"></div>
+      </div>
+    </div>
+  </div>
   <header class="page-header">
     <div class="page-header__top">
       <div class="page-header__top-inner">
@@ -27,7 +35,7 @@
       </div>
     </div>
     <div class="person">
-      <div class="person__photo"><img src="img/profile-photo.jpg" alt="Pavel Tarasenko" width="220" height="220"></div>
+      <div class="person__photo"><img class="person__img" src="img/profile-photo.jpg" alt="Pavel Tarasenko" width="220" height="220"></div>
       <h1 class="person__name">Pavel Tarasenko</h1>
       <p class="person__prof">junior Front-end developer</p>
     </div>
@@ -168,11 +176,10 @@
       <p>Так же стараюсь каждый день по немного уделять время на английский, думаю в этой сфере знания английского, хотя бы на уровне свободного чтения очень много принесет пользы.</p>
       <p>Я не из тех людей которые в связи с тяжелой ситуацией в стране в финансом плане решили "войти в it", закончили какие то курсы и думают что их с руками и ногами заберут. Да я тоже заканчивал курсы, но это происходило почти на протяжении года, свободное время старался заполнять закреплением тех навыков которые мне давали. Изначально все это было для меня как хобби, но потом решил что было бы здорово если бы хобби переросло в работу.</p>
     </article>
+    <a href="#" class="lift-up" id="back-to-top"></a>
   </main>
   <script src="js/svg4everybody.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/script.js"></script>
 </body>
