@@ -1782,8 +1782,6 @@ a {
     transform: scale(0);
     -webkit-transform: scale(0); } }
 
-/* Small Devices, Tablets */
-
 .skills {
   margin-bottom: 20px; }
 
@@ -2024,10 +2022,6 @@ a {
   .sert__item {
     width: 130px; } }
   @media only screen and (max-width: 768px) {
-  .animated {/*CSS transitions*/
-    transition-property: none !important;/*CSS transforms*/
-    transform: none !important;/*CSS animations*/
-    animation: none !important; }
   .animated {/*CSS transitions*/
     transition-property: none !important;/*CSS transforms*/
     transform: none !important;/*CSS animations*/
