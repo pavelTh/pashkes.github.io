@@ -16,6 +16,7 @@
   img {
     filter: grayscale(100%);
     border-radius: 50%;
+    animation-duration: 1s;
     transition: filter 0.3s;
     &:hover {
       filter: grayscale(0);
@@ -43,6 +44,6 @@
     position: absolute;
     top: -110px;
     left: 50%;
-    transform: translateX(-50%);
+    margin-left: -110px;
   }
 }

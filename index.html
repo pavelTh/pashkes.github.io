@@ -2,166 +2,173 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Potfolio</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
-	<link rel="stylesheet" href="css/style.min.css" type="text/css">
-	<link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Potfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
-	<header class="page-header">
-		<div class="page-header__top">
-			<div class="page-header__top-inner">
-				<nav class="menu">
-					<ul class="menu__list">
-						<li class="menu__item">
-							<a href="#" class="menu__link  menu__link--active">Portfolio</a>
-						</li>
-						<li class="menu__item">
-							<a href="cv.html" class="menu__link">CV</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-		<div class="person">
-			<div class="person__photo"><img src="img/profile-photo.jpg" alt="Pavel Tarasenko" width="220" height="220"></div>
-			<h1 class="person__name">Pavel Tarasenko</h1>
-			<p class="person__prof">junior Front-end developer</p>
-		</div>
-		<div class="contacts">
-			<div class="contacts__title"> </div>
-			<ul class="contacts">
-				<li class="contacts__item">
-					<svg viewBox="0 0 40 40" width="40px" height="40px" >
-						<use xlink:href="img/symbol.svg#icon-location2"></use>
-					</svg>
-					<span class="contacts__link">
+  <div id="loading">
+    <div id="loading-center">
+      <div id="loading-center-absolute">
+        <div class="object" id="object_one"></div>
+        <div class="object" id="object_two"></div>
+        <div class="object" id="object_three"></div>
+      </div>
+    </div>
+  </div>
+  <header class="page-header">
+    <div class="page-header__top">
+      <div class="page-header__top-inner">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link  menu__link--active">Portfolio</a>
+            </li>
+            <li class="menu__item">
+              <a href="cv.html" class="menu__link">CV</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="person">
+      <div class="person__photo" id="person"><img class="person__img" src="img/profile-photo.jpg" alt="Pavel Tarasenko" width="220" height="220"></div>
+      <h1 class="person__name">Pavel Tarasenko</h1>
+      <p class="person__prof">junior Front-end developer</p>
+    </div>
+    <div class="contacts">
+      <div class="contacts__title"> </div>
+      <ul class="contacts">
+        <li class="contacts__item">
+          <svg viewBox="0 0 40 40" width="40px" height="40px">
+            <use xlink:href="img/symbol.svg#icon-location2"></use>
+          </svg>
+          <span class="contacts__link">
 						Borova, Kyivs'ka oblast
 					</span>
-				</li>
-				<li class="contacts__item">
-					<svg>
-						<use xlink:href="img/symbol.svg#icon-phone"></use>
-					</svg>
-					<a href="tel:+380993505795" class="contacts__link">
+        </li>
+        <li class="contacts__item">
+          <svg>
+            <use xlink:href="img/symbol.svg#icon-phone"></use>
+          </svg>
+          <a href="tel:+380993505795" class="contacts__link">
 						+38 099 350 57 95
 					</a>
-				</li>
-				<li class="contacts__item">
-					<svg>
-						<use xlink:href="img/symbol.svg#icon-mention"></use>
-					</svg>
-					<a href="mailto:pashkes@gmail.com" class="contacts__link">
+        </li>
+        <li class="contacts__item">
+          <svg>
+            <use xlink:href="img/symbol.svg#icon-mention"></use>
+          </svg>
+          <a href="mailto:pashkes@gmail.com" class="contacts__link">
 						pashkes@gmail.com
 					</a>
-				</li>
-			</ul>
-		</div>
-	</header>
-	<main class="content">
-		<article class="content__block   progects">
-			<a href="https://pashkes.github.io/pink" class="progects__img"><img src="img/progect_img/pink.jpg" alt="pink" width="640" height="300">
-				<svg class="progects__view">
-					<use xlink:href="img/symbol.svg#icon-eye"></use>
-				</svg>
-			</a>
-			<div class="progects__info">
-				<h2 class="progects__title">Pink</h2>
-				<div class="progects__text">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos corrupti perferendis aut ipsam laborum quam ab unde placeat? Reprehenderit, voluptates, animi! Quae quis, magnam ipsam fuga error veniam voluptatem velit ut modi, omnis vel, perferendis deserunt iure facere animi sunt explicabo delectus et itaque numquam ea. Veritatis, similique, veniam.</p>
-					<ul class="tags">
-						<li class="tags__item">tag</li>
-						<li class="tags__item">tag name</li>
-					</ul>
-					<a href="https://pashkes.github.io/pink" class="progects__link btn">Watch</a>
-				</div>
-			</div>
-		</article>
-		<article class="content__block  progects">
-			<a href="https://pashkes.github.io/beinside" class="progects__img"><img src="img/progect_img/beinside.jpg" alt="beinside" width="640" height="300">
-				<svg class="progects__view">
-					<use xlink:href="img/symbol.svg#icon-eye"></use>
-				</svg>
-			</a>
-			<div class="progects__info">
-				<h2 class="progects__title">Beinside</h2>
-				<div class="progects__text">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos corrupti perferendis aut ipsam laborum quam ab unde placeat? Reprehenderit, voluptates, animi! Quae quis, magnam ipsam fuga error veniam voluptatem velit ut modi, omnis vel, perferendis deserunt iure facere animi sunt explicabo delectus et itaque numquam ea. Veritatis, similique, veniam.</p>
-					<ul class="tags">
-						<li class="tags__item">tag</li>
-						<li class="tags__item">tag name</li>
-					</ul>
-					<a href="https://pashkes.github.io/beinside" class="progects__link btn">Watch</a>
-				</div>
-			</div>
-		</article>
-		<article class="content__block   progects">
-			<a href="https://pashkes.github.io/gllacy" class="progects__img"><img src="img/progect_img/gllacy.jpg" alt="gllacy" width="640" height="300">
-				<svg class="progects__view">
-					<use xlink:href="img/symbol.svg#icon-eye"></use>
-				</svg>
-			</a>
-			<div class="progects__info">
-				<h2 class="progects__title">Gllacy</h2>
-				<div class="progects__text">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos corrupti perferendis aut ipsam laborum quam ab unde placeat? Reprehenderit, voluptates, animi! Quae quis, magnam ipsam fuga error veniam voluptatem velit ut modi, omnis vel, perferendis deserunt iure facere animi sunt explicabo delectus et itaque numquam ea. Veritatis, similique, veniam.</p>
-					<ul class="tags">
-						<li class="tags__item">tag</li>
-						<li class="tags__item">tag name</li>
-					</ul>
-					<a href="https://pashkes.github.io/gllacy" class="progects__link btn">Watch</a>
-				</div>
-			</div>
-		</article>
-		<article class="content__block  progects">
-			<a href="https://pashkes.github.io/olivia" class="progects__img">
-				<img src="img/progect_img/olivia.jpg" alt="olivia" width="640" height="300">
-				<svg class="progects__view">
-					<use xlink:href="img/symbol.svg#icon-eye"></use>
-				</svg>
-			</a>
-			<div class="progects__info">
-				<h2 class="progects__title">Olivia</h2>
-				<div class="progects__text">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos corrupti perferendis aut ipsam laborum quam ab unde placeat? Reprehenderit, voluptates, animi! Quae quis, magnam ipsam fuga error veniam voluptatem velit ut modi, omnis vel, perferendis deserunt iure facere animi sunt explicabo delectus et itaque numquam ea. Veritatis, similique, veniam.</p>
-					<ul class="tags">
-						<li class="tags__item">tag</li>
-						<li class="tags__item">tag name</li>
-					</ul>
-					<a href="https://pashkes.github.io/olivia" class="progects__link btn">Watch</a>
-				</div>
-			</div>
-		</article>
-		<article class="content__block  progects">
-			<a href="https://pashkes.github.io/tour" class="progects__img"><img src="img/progect_img/tour.jpg" alt="tour" width="640" height="300">
-				<svg class="progects__view">
-					<use xlink:href="img/symbol.svg#icon-eye"></use>
-				</svg>
-			</a>
-			<div class="progects__info">
-				<h2 class="progects__title">Tour</h2>
-				<div class="progects__text">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos corrupti perferendis aut ipsam laborum quam ab unde placeat? Reprehenderit, voluptates, animi! Quae quis, magnam ipsam fuga error veniam voluptatem velit ut modi, omnis vel, perferendis deserunt iure facere animi sunt explicabo delectus et itaque numquam ea. Veritatis, similique, veniam.</p>
-					<ul class="tags">
-						<li class="tags__item">tag</li>
-						<li class="tags__item">tag name</li>
-					</ul>
-					<a href="https://pashkes.github.io/tour" class="progects__link btn">Watch</a>
-				</div>
-			</div>
-		</article>
-	</main>
-	<a href="#" class="lift-up" id="back-to-top"></a>
-	<script src="js/svg4everybody.min.js"></script>
-	<!-- <script src="js/wow.min.js"></script> -->
-	<!-- <script>
-		new WOW().init();
-	</script> -->
-	<script src="js/script.js"></script>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="content">
+    <article class="content__block   progects">
+      <a href="https://pashkes.github.io/pink" class="progects__img"><img src="img/progect_img/pink.jpg" alt="pink" width="640" height="300">
+        <svg class="progects__view">
+          <use xlink:href="img/symbol.svg#icon-eye"></use>
+        </svg>
+      </a>
+      <div class="progects__info">
+        <h2 class="progects__title">Pink</h2>
+        <div class="progects__text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos corrupti perferendis aut ipsam laborum quam ab unde placeat? Reprehenderit, voluptates, animi! Quae quis, magnam ipsam fuga error veniam voluptatem velit ut modi, omnis vel, perferendis deserunt iure facere animi sunt explicabo delectus et itaque numquam ea. Veritatis, similique, veniam.</p>
+          <ul class="tags">
+            <li class="tags__item">tag</li>
+            <li class="tags__item">tag name</li>
+          </ul>
+          <a href="https://pashkes.github.io/pink" class="progects__link btn">Watch</a>
+        </div>
+      </div>
+    </article>
+    <article class="content__block  progects">
+      <a href="https://pashkes.github.io/beinside" class="progects__img"><img src="img/progect_img/beinside.jpg" alt="beinside" width="640" height="300">
+        <svg class="progects__view">
+          <use xlink:href="img/symbol.svg#icon-eye"></use>
+        </svg>
+      </a>
+      <div class="progects__info">
+        <h2 class="progects__title">Beinside</h2>
+        <div class="progects__text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos corrupti perferendis aut ipsam laborum quam ab unde placeat? Reprehenderit, voluptates, animi! Quae quis, magnam ipsam fuga error veniam voluptatem velit ut modi, omnis vel, perferendis deserunt iure facere animi sunt explicabo delectus et itaque numquam ea. Veritatis, similique, veniam.</p>
+          <ul class="tags">
+            <li class="tags__item">tag</li>
+            <li class="tags__item">tag name</li>
+          </ul>
+          <a href="https://pashkes.github.io/beinside" class="progects__link btn">Watch</a>
+        </div>
+      </div>
+    </article>
+    <article class="content__block   progects">
+      <a href="https://pashkes.github.io/gllacy" class="progects__img"><img src="img/progect_img/gllacy.jpg" alt="gllacy" width="640" height="300">
+        <svg class="progects__view">
+          <use xlink:href="img/symbol.svg#icon-eye"></use>
+        </svg>
+      </a>
+      <div class="progects__info">
+        <h2 class="progects__title">Gllacy</h2>
+        <div class="progects__text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos corrupti perferendis aut ipsam laborum quam ab unde placeat? Reprehenderit, voluptates, animi! Quae quis, magnam ipsam fuga error veniam voluptatem velit ut modi, omnis vel, perferendis deserunt iure facere animi sunt explicabo delectus et itaque numquam ea. Veritatis, similique, veniam.</p>
+          <ul class="tags">
+            <li class="tags__item">tag</li>
+            <li class="tags__item">tag name</li>
+          </ul>
+          <a href="https://pashkes.github.io/gllacy" class="progects__link btn">Watch</a>
+        </div>
+      </div>
+    </article>
+    <article class="content__block  progects">
+      <a href="https://pashkes.github.io/olivia" class="progects__img">
+        <img src="img/progect_img/olivia.jpg" alt="olivia" width="640" height="300">
+        <svg class="progects__view">
+          <use xlink:href="img/symbol.svg#icon-eye"></use>
+        </svg>
+      </a>
+      <div class="progects__info">
+        <h2 class="progects__title">Olivia</h2>
+        <div class="progects__text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos corrupti perferendis aut ipsam laborum quam ab unde placeat? Reprehenderit, voluptates, animi! Quae quis, magnam ipsam fuga error veniam voluptatem velit ut modi, omnis vel, perferendis deserunt iure facere animi sunt explicabo delectus et itaque numquam ea. Veritatis, similique, veniam.</p>
+          <ul class="tags">
+            <li class="tags__item">tag</li>
+            <li class="tags__item">tag name</li>
+          </ul>
+          <a href="https://pashkes.github.io/olivia" class="progects__link btn">Watch</a>
+        </div>
+      </div>
+    </article>
+    <article class="content__block  progects">
+      <a href="https://pashkes.github.io/tour" class="progects__img"><img src="img/progect_img/tour.jpg" alt="tour" width="640" height="300">
+        <svg class="progects__view">
+          <use xlink:href="img/symbol.svg#icon-eye"></use>
+        </svg>
+      </a>
+      <div class="progects__info">
+        <h2 class="progects__title">Tour</h2>
+        <div class="progects__text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos corrupti perferendis aut ipsam laborum quam ab unde placeat? Reprehenderit, voluptates, animi! Quae quis, magnam ipsam fuga error veniam voluptatem velit ut modi, omnis vel, perferendis deserunt iure facere animi sunt explicabo delectus et itaque numquam ea. Veritatis, similique, veniam.</p>
+          <ul class="tags">
+            <li class="tags__item">tag</li>
+            <li class="tags__item">tag name</li>
+          </ul>
+          <a href="https://pashkes.github.io/tour" class="progects__link btn">Watch</a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <a href="#" class="lift-up" id="back-to-top"></a>
+  <script src="js/svg4everybody.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

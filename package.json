@@ -33,6 +33,7 @@
     "gulp-sass": "2.3.1",
     "gulp-svgmin": "^1.2.2",
     "gulp-svgstore": "^6.0.0",
+    "gulp-uncss": "^1.0.6",
     "run-sequence": "^1.2.2",
     "svgmin": "^0.1.0"
   },

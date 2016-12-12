@@ -14,7 +14,6 @@ var del = require("del");
 var run = require('run-sequence');
 var fs = require('fs');
 var ghPages = require('gulp-gh-pages');
-var svgmin = require('gulp-svgmin');
 // 1. очистка
 gulp.task("clean", function() {
     return del("build");
@@ -60,7 +59,7 @@ gulp.task("images", function() {
     return gulp.src("build/img/**/*.{png,jpg,gif}")
         .pipe(imagemin([
             imagemin.optipng({ optimizationLevel: 3 }),
-            imagemin.jpegtran({ progressive: true })
+            imagemin.jpegtran({ progressive: 70 })
         ]))
         .pipe(gulp.dest("build/img"));
 });

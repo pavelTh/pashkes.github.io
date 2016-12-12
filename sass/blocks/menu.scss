@@ -17,6 +17,8 @@
   font-size: 24px;
   background-color: #eae6e6;
   border-radius: 2px;
+  animation-delay: 1s;
+  animation-duration: 1s;
   &--active {
     border-bottom: 2px solid $black;
     &:hover {
