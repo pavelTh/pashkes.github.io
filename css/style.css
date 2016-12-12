@@ -449,6 +449,7 @@ a {
   margin-bottom: 40px; }
 
 .page-header__top-inner {
+  min-width: 230px;
   width: auto;
   padding: 0 15px;
   padding: 25px 15px; }
@@ -487,9 +488,12 @@ a {
   text-align: center; }
 
 .menu__list {
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 .menu__item {
   margin-right: 10px; }
@@ -516,8 +520,10 @@ a {
 .contacts {
   width: 276px;
   margin: 0 auto;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column; }
+  -ms-flex-direction: column;
+      flex-direction: column; }
   .contacts svg {
     width: 40px;
     height: 40px;
@@ -541,15 +547,20 @@ a {
     color: #2b98d4; }
 
 .content {
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 230px;
   width: auto;
   padding: 0 15px; }
 
 .content__block {
   position: relative;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   width: 100%;
   margin-bottom: 40px;
   padding: 15px;
@@ -613,6 +624,9 @@ a {
     transform: scale(1.2); }
   .progects__img img {
     border-radius: 5px; }
+
+.progects__img-inner {
+  min-height: 100%; }
 
 .progects__info p {
   margin-top: 10px;
@@ -698,9 +712,12 @@ a {
   z-index: 1; }
 
 .sert {
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 .sert__item {
   width: 210px;
@@ -829,15 +846,21 @@ a {
     left: 50%;
     transform: translateX(-50%); }
   .menu__list {
-    min-height: 150px;
+    height: 150px;
+    -ms-flex-align: center;
     -ms-grid-row-align: center;
     align-items: center;
+    -ms-flex-pack: justify;
     justify-content: space-between; }
   .contacts {
+    min-width: 230px;
     width: auto;
     padding: 0 15px;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -ms-flex-pack: center;
     justify-content: center; }
   .contacts__item {
     margin-right: 20px; }
@@ -855,6 +878,7 @@ a {
   .progects__img {
     margin: 0 auto; }
   .sert {
+    -ms-flex-pack: distribute;
     justify-content: space-around; } }
   @media (min-width: 768px) and (min-width: 768px) {
   .contacts {
@@ -871,6 +895,7 @@ a {
     width: 97.5%;
     max-width: 1170px; }
   .content {
+    -ms-flex-pack: justify;
     justify-content: space-between; }
   .content__block {
     width: 48.5565%; }

@@ -1,3 +1,7 @@
+'use strict';
+svg4everybody();
+
+
 var acc = document.getElementsByClassName("progects__title");
 var i;
 
