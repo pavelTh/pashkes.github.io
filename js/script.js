@@ -70,19 +70,19 @@ $(document).ready(function(){
 
 // Preloader
 $(window).on('load',function() {
-	$("#loading-center").on('click', function() {
-	$("#loading").fadeOut(500);
+	$(".preloader__center").on('click', function() {
+	$(".preloader").fadeOut(500);
 	})		
 });
 
 $(window).on('load', function() {
-   $("#loading").fadeOut(500);
+   $(".preloader").fadeOut(500);
 })
 
 
 $(window).on('load',function() {
-	$("#loading").delay(2000).fadeOut(500);
-	$("#loading-center").on('click',function() {
-	$("#loading").fadeOut(500);
+	$(".preloader").delay(2000).fadeOut(500);
+	$(".preloader__center").on('click',function() {
+	$(".preloader").fadeOut(500);
 	})
 })
