@@ -487,6 +487,64 @@ a {
   .btn:focus {
     box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.4); }
 
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both; }
+
+.animated.infinite {
+  animation-iteration-count: infinite; }
+
+.animated.hinge {
+  animation-duration: 2s; }
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  animation-duration: .75s; }
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+
+.zoomIn {
+  animation-name: zoomIn; }
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1); } }
+
+.bounceIn {
+  animation-name: bounceIn; }
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible; }
+  to {
+    transform: translate3d(0, 0, 0); } }
+
+.slideInUp {
+  animation-name: slideInUp; }
+
 .page-header {
   margin-bottom: 20px; }
 
@@ -535,12 +593,9 @@ a {
   text-align: center; }
 
 .menu__list {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: center;
-      justify-content: center; }
+  flex-wrap: wrap;
+  justify-content: center; }
 
 .menu__item {
   margin-right: 10px; }
@@ -569,10 +624,8 @@ a {
 .contacts {
   width: 276px;
   margin: 0 auto;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column; }
+  flex-direction: column; }
   .contacts svg {
     width: 40px;
     height: 40px;
@@ -596,20 +649,16 @@ a {
     color: #2b98d4; }
 
 .content {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   min-width: 230px;
   width: auto;
   padding: 0 15px; }
 
 .content__block {
   position: relative;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
   width: 100%;
   margin-bottom: 40px;
   padding: 15px;
@@ -762,12 +811,9 @@ a {
   z-index: 1; }
 
 .sert {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: center;
-      justify-content: center; }
+  flex-wrap: wrap;
+  justify-content: center; }
 
 .sert__item {
   width: 210px;
@@ -877,6 +923,11 @@ a {
     border-radius: 2px;
     background: #fff;
     box-shadow: -1px -1px 2px #004977; }
+  @media only screen and (max-width: 768px) {
+  .animated {/*CSS transitions*/
+    transition-property: none !important;/*CSS transforms*/
+    transform: none !important;/*CSS animations*/
+    animation: none !important; } }
   @media (min-width: 768px) {
   .page-header__top-inner {
     width: 96.09375%;
@@ -897,20 +948,15 @@ a {
     margin-left: -110px; }
   .menu__list {
     height: 150px;
-    -ms-flex-align: center;
     -ms-grid-row-align: center;
     align-items: center;
-    -ms-flex-pack: justify;
     justify-content: space-between; }
   .contacts {
     min-width: 230px;
     width: auto;
     padding: 0 15px;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -ms-flex-pack: center;
     justify-content: center; }
   .contacts__item {
     margin-right: 20px; }
@@ -928,13 +974,7 @@ a {
   .progects__img {
     margin: 0 auto; }
   .sert {
-    -ms-flex-pack: distribute;
     justify-content: space-around; } }
-  @media (min-width: 768px) and (min-width: 768px) {
-  .contacts {
-    width: 96.09375%;
-    max-width: 994px;
-    margin: 0 auto; } }
   @media (min-width: 1024px) {
   .page-header__top-inner {
     width: 97.5%;
@@ -945,7 +985,6 @@ a {
     width: 97.5%;
     max-width: 1170px; }
   .content {
-    -ms-flex-pack: justify;
     justify-content: space-between; }
   .content__block {
     width: 48.5565%; }
@@ -959,6 +998,11 @@ a {
     margin-bottom: 20px; }
   .sert__item:last-child {
     margin-bottom: 0; } }
+  @media (min-width: 768px) and (min-width: 768px) {
+  .contacts {
+    width: 96.09375%;
+    max-width: 994px;
+    margin: 0 auto; } }
   @media (min-width: 768px) and (min-width: 1024px) {
   .contacts {
     width: 97.5%;
@@ -966,8 +1010,3 @@ a {
   @media (min-width: 1200px) {
   .sert__item {
     width: 130px; } }
-  @media only screen and (max-width: 768px) {
-  .animated {/*CSS transitions*/
-    transition-property: none !important;/*CSS transforms*/
-    transform: none !important;/*CSS animations*/
-    animation: none !important; } }
