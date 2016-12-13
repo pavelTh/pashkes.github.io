@@ -15,6 +15,7 @@ var imagemin = require('gulp-imagemin');
 var del = require("del");
 var run = require('run-sequence');
 var fs = require('fs');
+var jsmin = require('gulp-jsmin');
 var ghPages = require('gulp-gh-pages');
 
 gulp.task('deploy', function() {
@@ -80,6 +81,14 @@ gulp.task("symbols", function() {
     .pipe(rename("symbol.svg"))
     .pipe(gulp.dest("build/img"));
 });
+
+//MINjs
+gulp.task('minJs', function () {
+    gulp.src('js/*.js')
+        .pipe(jsmin())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('build/js'));
+});
 // запуск сборки
 gulp.task("build", function(fn) {
   run(
@@ -88,6 +97,7 @@ gulp.task("build", function(fn) {
     "style",
     "images",
     "symbols",
+    "minJs",
     "deploy",
     fn
   );
@@ -126,6 +136,16 @@ gulp.task("stylelocal", function() {
     .pipe(gulp.dest("css"));
 });
 
+// 5. символы (SVG)
+gulp.task("svgloc", function() {
+  return gulp.src("img/icon/*.svg")
+    .pipe(svgmin())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("symbol.svg"))
+    .pipe(gulp.dest("img"));
+});
 
 gulp.task("ls", function() {
   server.init({

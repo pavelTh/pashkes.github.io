@@ -27,6 +27,7 @@
     "gulp-csso": "^2.0.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^3.0.1",
+    "gulp-jsmin": "^0.1.5",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.1.1",
     "gulp-rename": "^1.2.2",
