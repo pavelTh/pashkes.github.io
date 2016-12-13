@@ -1,3 +1,10 @@
+@media only screen and (max-width : 768px) {
+  .wow {
+    transition-property: none !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;

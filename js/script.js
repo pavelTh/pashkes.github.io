@@ -33,11 +33,11 @@ var contentInfo = $('.progects__info');
 contentInfo.addClass('wow slideInUp')
 
 var icon = $('.content__icon');
-icon.css({'animation-delay': '1s', 'animatio-duration': '1s'})
+icon.css({ 'animation-delay': '1s', 'animatio-duration': '1s' })
 icon.addClass('wow zoomIn');
 
 var contactsIcon = $('.contacts__item');
-contactsIcon.css({'animation-delay': '1s', 'animatio-duration': '1s'})
+contactsIcon.css({ 'animation-delay': '1s', 'animatio-duration': '1s' })
 contactsIcon.addClass('wow zoomIn');
 
 
@@ -52,36 +52,30 @@ for (i = 0; i < acc.length; i++) {
     }
 }
 
+
 // to-top
-$(document).ready(function(){
+var liftUp = $('.lift-up');
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 50) {
+        $(liftUp).fadeIn();
+    } else {
+        $(liftUp).fadeOut();
+    }
+});
 
-     $(window).scroll(function () {
-            if ($(this).scrollTop() > 50) {
-                $('.lift-up').fadeIn();
-            } else {
-                $('.lift-up').fadeOut();
-            }
-        });
-
-        $('.lift-up').click(function () {
-            $('body,html').animate({
-                scrollTop: 0
-            }, 800);
-            return false;
-        });
+$(liftUp).click(function() {
+    $('body,html').animate({
+        scrollTop: 0
+    }, 800);
+    return false;
 });
 
 
 // Preloader
-$(window).on('load',function() {
-	$(".preloader").fadeOut(500);
-});
+var preloader = $('.preloader')
 
 $(window).on('load', function() {
-   $(".preloader").fadeOut(500);
-})
-
-$(window).on('load',function() {
-	$(".preloader").delay(2000).fadeOut(500);
-	$(".preloader").fadeOut(500);
-})
+    $(preloader).fadeOut(500);
+    $(preloader).delay(2000).fadeOut(500);
+    $(preloader).fadeOut(500);
+});
