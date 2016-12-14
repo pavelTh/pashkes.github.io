@@ -50,36 +50,12 @@
 }
 .progects__title {
   margin-bottom: 0;
-  padding: 18px;
-  background: #eee url(../img/icon/icon-plus.svg) 95% center no-repeat;
-  background-size: 20px 20px;
   font-size: 24px;
   font-weight: 500;
   color: #222;
   text-align: left;
-  font-weight: 600;
-  cursor: pointer;
   border-radius: 5px;
   transition: 0.4s;
-  &:hover {
-    background-color: #ddd;
-  }
-}
-.progects__title.active {
-  background: #ddd url(../img/icon/icon-minus.svg) 95% center no-repeat;
-  background-size: 20px 20px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.progects__text {
-  max-height: 0;
-  overflow: hidden;
-  transition: 0.6s ease-in-out;
-  opacity: 0;
-}
-.progects__text.show {
-  opacity: 1;
-  max-height: 500px
 }
 .progects__link {
   margin-top: auto;
