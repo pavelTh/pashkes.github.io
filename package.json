@@ -19,7 +19,7 @@
   "homepage": "https://github.com/pashkes/portfolio#readme",
   "devDependencies": {
     "autoprefixer": "6.3.6",
-    "browser-sync": "^2.18.1",
+    "browser-sync": "^2.18.5",
     "css-mqpacker": "^5.0.1",
     "del": "^2.2.1",
     "editorconfig-tools": "0.1.1",
@@ -35,6 +35,7 @@
     "gulp-svgmin": "^1.2.2",
     "gulp-svgstore": "^6.0.0",
     "gulp-uncss": "^1.0.6",
+    "gulp-watch": "^4.3.11",
     "run-sequence": "^1.2.2",
     "svgmin": "^0.1.0"
   },

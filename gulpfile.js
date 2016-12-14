@@ -17,7 +17,7 @@ var run = require('run-sequence');
 var fs = require('fs');
 var jsmin = require('gulp-jsmin');
 var ghPages = require('gulp-gh-pages');
-
+var watch = require('gulp-watch');
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
@@ -111,30 +111,6 @@ gulp.task("serve", function() {
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
 });
-// Локальная сборка стилей
-gulp.task("stylelocal", function() {
-  gulp.src("sass/style.scss")
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer({
-        browsers: [
-          "last 1 version",
-          "last 2 Chrome versions",
-          "last 2 Firefox versions",
-          "last 2 Opera versions",
-          "last 2 Edge versions"
-        ]
-      }),
-      mqpacker({
-        sort: false
-      })
-    ]))
-    .pipe(gulp.dest("css"))
-    .pipe(minify())
-    .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("css"));
-});
 
 // 5. символы (SVG)
 gulp.task("svgloc", function() {
@@ -147,6 +123,17 @@ gulp.task("svgloc", function() {
     .pipe(gulp.dest("img"));
 });
 
+// Локальная сборка стилей
+gulp.task("stylelocal", function() {
+  gulp.src("sass/style.scss")
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(postcss([]))
+    .pipe(gulp.dest("css"))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("css"));
+});
 gulp.task("ls", function() {
   server.init({
     server: "."
