@@ -17,15 +17,28 @@ var run = require('run-sequence');
 var fs = require('fs');
 var jsmin = require('gulp-jsmin');
 var ghPages = require('gulp-gh-pages');
-var watch = require('gulp-watch');
-gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages());
-});
+
+//default
+gulp.task('default', [
+  'deploy', 
+  'clean', 
+  'copy', 
+  'style', 
+  'images',
+  'symbols', 
+  'minJs', 
+  'build', 
+  'serve', 
+  'svgloc', 
+  'stylelocal',
+  'ls'
+  ]);
+
 // 1. очистка
 gulp.task("clean", function() {
   return del("build");
 });
+
 // 2. копирование
 gulp.task("copy", function() {
   return gulp.src([
@@ -38,6 +51,7 @@ gulp.task("copy", function() {
     })
     .pipe(gulp.dest("build"));
 });
+
 // 3. сборка стилей
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
@@ -62,6 +76,7 @@ gulp.task("style", function() {
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"));
 });
+
 // 4. картинк
 gulp.task("images", function() {
   return gulp.src("build/img/**/*.{png,jpg,gif}")
@@ -71,6 +86,7 @@ gulp.task("images", function() {
     ]))
     .pipe(gulp.dest("build/img"));
 });
+
 // 5. символы (SVG)
 gulp.task("symbols", function() {
   return gulp.src("build/img/icon/*.svg")
@@ -82,13 +98,20 @@ gulp.task("symbols", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-//MINjs
+// 6. MINjs
 gulp.task('minJs', function () {
     gulp.src('js/*.js')
         .pipe(jsmin())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('build/js'));
 });
+
+//7. deploy github
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
 // запуск сборки
 gulp.task("build", function(fn) {
   run(
@@ -102,6 +125,7 @@ gulp.task("build", function(fn) {
     fn
   );
 });
+
 // serv - отслеживание изменений
 gulp.task("serve", function() {
   server.init({
@@ -112,7 +136,7 @@ gulp.task("serve", function() {
   gulp.watch("*.html").on("change", server.reload);
 });
 
-// 5. символы (SVG)
+//Symbol local
 gulp.task("svgloc", function() {
   return gulp.src("img/icon/*.svg")
     .pipe(svgmin())
@@ -123,7 +147,7 @@ gulp.task("svgloc", function() {
     .pipe(gulp.dest("img"));
 });
 
-// Локальная сборка стилей
+//local style
 gulp.task("stylelocal", function() {
   gulp.src("sass/style.scss")
     .pipe(plumber())
@@ -134,6 +158,8 @@ gulp.task("stylelocal", function() {
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("css"));
 });
+
+//local server
 gulp.task("ls", function() {
   server.init({
     server: "."
