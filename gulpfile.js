@@ -1,9 +1,9 @@
 "use strict";
 
-var gulp = require("gulp");
+var gulp = require("gulp"),
     rename = require("gulp-rename"),
     plumber = require("gulp-plumber"),
-    sass = require("gulp-sass");
+    sass = require("gulp-sass"),
     postcss = require("gulp-postcss"),
     autoprefixer = require("autoprefixer"),
     browserSync = require('browser-sync').create(),
@@ -170,5 +170,7 @@ gulp.task('default', [
     'svgloc',
     'stylelocal',
     'ls',
-    'serve'
+    'serve',
+    'mobile',
+    'desktop'
 ]);
