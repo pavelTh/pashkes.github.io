@@ -14,13 +14,6 @@
 }
 .contacts__item {
   line-height: 40px;
-  &:first-child {
-    .contacts__link {
-      &:hover {
-        color: $black;
-      }
-    }
-  }
 }
 .contacts__link {
   display: inline-block;

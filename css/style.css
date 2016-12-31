@@ -695,9 +695,6 @@ a:hover {
 .contacts__item {
   line-height: 40px; }
 
-.contacts__item:first-child .contacts__link:hover {
-  color: #212121; }
-
 .contacts__link {
   display: inline-block;
   padding-left: 5px;
