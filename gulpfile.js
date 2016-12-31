@@ -1,32 +1,29 @@
 "use strict";
-// переменные (модули)
-var gulp = require("gulp");
-var rename = require("gulp-rename");
-var plumber = require("gulp-plumber");
-var sass = require("gulp-sass");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync");
-var mqpacker = require("css-mqpacker");
-var minify = require('gulp-csso');
-var svgmin = require('gulp-svgmin');
-var svgstore = require('gulp-svgstore');
-var imagemin = require('gulp-imagemin');
-var del = require("del");
-var run = require('run-sequence');
-var fs = require('fs');
-var jsmin = require('gulp-jsmin');
-var ghPages = require('gulp-gh-pages');
-var watch = require('gulp-watch');
-gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages());
-});
-// 1. очистка
+
+var gulp = require("gulp"),
+  rename = require("gulp-rename"),
+  plumber = require("gulp-plumber"),
+  sass = require("gulp-sass"),
+  postcss = require("gulp-postcss"),
+  autoprefixer = require("autoprefixer"),
+  browserSync = require('browser-sync').create(),
+  mqpacker = require("css-mqpacker"),
+  minify = require('gulp-csso'),
+  svgmin = require('gulp-svgmin'),
+  svgstore = require('gulp-svgstore'),
+  imagemin = require('gulp-imagemin'),
+  del = require("del"),
+  run = require('run-sequence'),
+  fs = require('fs'),
+  jsmin = require('gulp-jsmin'),
+  ghPages = require('gulp-gh-pages');
+
+// 1. Clean
 gulp.task("clean", function() {
   return del("build");
 });
-// 2. копирование
+
+// 2. Copy
 gulp.task("copy", function() {
   return gulp.src([
       "fonts/**/*.{woff,woff2}",
@@ -38,9 +35,10 @@ gulp.task("copy", function() {
     })
     .pipe(gulp.dest("build"));
 });
-// 3. сборка стилей
+
+// 3. Style 
 gulp.task("style", function() {
-  gulp.src("sass/style.scss")
+  return gulp.src("sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
@@ -54,15 +52,17 @@ gulp.task("style", function() {
         ]
       }),
       mqpacker({
-        sort: false
+        sort: true
       })
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("build/css"))
+    .pipe(browserSync.stream());
 });
-// 4. картинк
+
+// 4. Images
 gulp.task("images", function() {
   return gulp.src("build/img/**/*.{png,jpg,gif}")
     .pipe(imagemin([
@@ -71,7 +71,8 @@ gulp.task("images", function() {
     ]))
     .pipe(gulp.dest("build/img"));
 });
-// 5. символы (SVG)
+
+// 5. Symbol (SVG)
 gulp.task("symbols", function() {
   return gulp.src("build/img/icon/*.svg")
     .pipe(svgmin())
@@ -82,14 +83,31 @@ gulp.task("symbols", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-//MINjs
-gulp.task('minJs', function () {
-    gulp.src('js/*.js')
-        .pipe(jsmin())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('build/js'));
+// 6. Js
+gulp.task('minJs', function() {
+  gulp.src('js/*.js')
+    .pipe(jsmin())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('build/js'));
 });
-// запуск сборки
+
+//7. deploy github
+gulp.task('deploy', function() {
+  return gulp.src('build/**/*')
+    .pipe(ghPages());
+});
+
+// Watch build change
+gulp.task("serve", function() {
+  browserSync.init({
+    server: "build"
+  });
+
+  gulp.watch("sass/**/*.{scss,sass}", ["style", browserSync.reload]);
+  gulp.watch("*.html").on("change", browserSync.reload);
+});
+
+// Start assembly
 gulp.task("build", function(fn) {
   run(
     "clean",
@@ -102,17 +120,8 @@ gulp.task("build", function(fn) {
     fn
   );
 });
-// serv - отслеживание изменений
-gulp.task("serve", function() {
-  server.init({
-    server: "build"
-  });
 
-  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
-});
-
-// 5. символы (SVG)
+//Symbol local
 gulp.task("svgloc", function() {
   return gulp.src("img/icon/*.svg")
     .pipe(svgmin())
@@ -123,22 +132,42 @@ gulp.task("svgloc", function() {
     .pipe(gulp.dest("img"));
 });
 
-// Локальная сборка стилей
-gulp.task("stylelocal", function() {
-  gulp.src("sass/style.scss")
+// local server
+gulp.task('serve', ['sass'], function() {
+
+  browserSync.init({
+    server: "."
+  });
+
+  gulp.watch("sass/**/*.scss", ['sass', browserSync.reload]);
+  gulp.watch("*.html").on('change', browserSync.reload);
+});
+
+// local compile sass
+gulp.task('sass', function() {
+  return gulp.src("sass/style.scss")
+    .pipe(sass().on('error', sass.logError))
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([]))
     .pipe(gulp.dest("css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("css"));
+    .pipe(gulp.dest("css"))
+    .pipe(browserSync.stream());
 });
-gulp.task("ls", function() {
-  server.init({
-    server: "."
-  });
 
-  gulp.watch("sass/**/*.{scss,sass}", ["stylelocal", server.reload]);
-  gulp.watch("*.html").on("change", server.reload);
-});
+//default gulp task
+gulp.task('default', [
+  'deploy',
+  'clean',
+  'copy',
+  'style',
+  'images',
+  'symbols',
+  'minJs',
+  'build',
+  'svgloc',
+  'serve',
+  'sass'
+]);
