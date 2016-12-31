@@ -48,7 +48,8 @@ gulp.task("style", function() {
           "last 2 Chrome versions",
           "last 2 Firefox versions",
           "last 2 Opera versions",
-          "last 2 Edge versions"
+          "last 2 Edge versions",
+          "last 12 IOS version"
         ]
       }),
       mqpacker({
@@ -134,7 +135,7 @@ gulp.task("svgloc", function() {
 
 // local server
 gulp.task('serve', ['sass'], function() {
-
+    
   browserSync.init({
     server: "."
   });
@@ -149,7 +150,21 @@ gulp.task('sass', function() {
     .pipe(sass().on('error', sass.logError))
     .pipe(plumber())
     .pipe(sass())
-    .pipe(postcss([]))
+    .pipe(postcss([
+      autoprefixer({
+        browsers: [
+          "last 1 version",
+          "last 2 Chrome versions",
+          "last 2 Firefox versions",
+          "last 2 Opera versions",
+          "last 2 Edge versions",
+          "last 12 IOS version"
+        ]
+      }),
+      mqpacker({
+        sort: true
+      })
+    ]))
     .pipe(gulp.dest("css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
