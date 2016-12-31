@@ -1,6 +1,5 @@
 node_modules/
 build/
-css/
 .publish/
 .DS_Store
 Thumbs.db
