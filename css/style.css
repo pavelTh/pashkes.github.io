@@ -636,8 +636,6 @@ a {
 
 .contacts__item {
   line-height: 40px; }
-  .contacts__item:first-child .contacts__link:hover {
-    color: #212121; }
 
 .contacts__link {
   display: inline-block;
@@ -734,7 +732,7 @@ a {
 .progects__title {
   margin-bottom: 0;
   padding: 18px;
-  background: #eee url(../img/icon/plus.svg) 95% center no-repeat;
+  background: #eee url(../img/icon/icon-plus.svg) 95% center no-repeat;
   background-size: 20px 20px;
   font-size: 24px;
   font-weight: 500;
@@ -748,7 +746,7 @@ a {
     background-color: #ddd; }
 
 .progects__title.active {
-  background: #ddd url(../img/icon/minus.svg) 95% center no-repeat;
+  background: #ddd url(../img/icon/icon-minus.svg) 95% center no-repeat;
   background-size: 20px 20px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0; }
@@ -831,8 +829,7 @@ a {
   width: 50px;
   height: 50px;
   z-index: 1;
-  stroke: #fff;
-  fill: transparent;
+  fill: white;
   transition: opacity 0.5s; }
 
 .sert__img {
@@ -892,7 +889,7 @@ a {
 .tags__item {
   position: relative;
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 20px;
   margin-bottom: 10px;
   padding: 0 10px 0 12px;
   color: #fff;
@@ -924,9 +921,9 @@ a {
     background: #fff;
     box-shadow: -1px -1px 2px #004977; }
   @media only screen and (max-width: 768px) {
-  .animated {/*CSS transitions*/
-    transition-property: none !important;/*CSS transforms*/
-    transform: none !important;/*CSS animations*/
+  .wow {
+    transition-property: none !important;
+    transform: none !important;
     animation: none !important; } }
   @media (min-width: 768px) {
   .page-header__top-inner {
