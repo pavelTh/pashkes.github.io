@@ -792,8 +792,6 @@ a {
           border-radius: 2px;
   -webkit-animation-duration: 1s;
           animation-duration: 1s; }
-  .content__block:last-child {
-    margin: 0 auto 40px auto; }
 
 .content__icon {
   fill: #fff;
